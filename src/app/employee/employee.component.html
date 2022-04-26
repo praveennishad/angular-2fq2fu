@@ -5,10 +5,14 @@
     <td>Gender</td>
     <td>Age</td>
   </tr>
-  <tr>
+  <tr *ngIf='showDetails'>
     <td>{{ firstName }}</td>
     <td>{{ lastName }}</td>
     <td>{{ gender }}</td>
     <td>{{ age }}</td>
   </tr>
 </table>
+<button (click)='toggleDetails()'>
+  {{showDetails ? 'Hide' : 'Show'}} Details
+</button>
+<br/>
